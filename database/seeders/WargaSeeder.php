@@ -3,14 +3,13 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Warga;
+use App\Models\Keluarga;
 
-class DatabaseSeeder extends Seeder
+class WargaSeeder extends Seeder
 {
     public function run(): void
     {
-        $this->call([
-            AdminSeeder::class,
-        ]);
+        //kosong
     }
-
 }
