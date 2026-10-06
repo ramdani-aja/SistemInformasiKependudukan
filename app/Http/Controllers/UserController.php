@@ -17,4 +17,10 @@ class UserController extends Controller
     {
         return view('dashboard');
     }
+
+    // Halaman Data Warga
+    public function dataWarga()
+    {
+        return view('data-warga');
+    }
 }
