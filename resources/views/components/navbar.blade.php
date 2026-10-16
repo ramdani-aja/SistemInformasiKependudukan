@@ -18,11 +18,11 @@
         </div>
         <!-- Menu -->
         <div class="d-flex flex-column gap-2">
-            <a href="{{ route('dashboard.store')}}" class="text-white text-decoration-none rounded-2 px-3 py-2 bg-primary">
+            <a href="{{ route('dashboard.store')}}" class="text-decoration-none rounded-2 px-3 py-2 {{Route::is('dashboard') ? 'text-white bg-primary' : 'text-secondary'}}">
                 <i class="bi bi-grid me-2"></i>
                 <small>Dashboard</small>
             </a>
-            <a href="{{ route('data-warga') }}" class="text-secondary text-decoration-none rounded-2 px-3 py-2">
+            <a href="{{ route('data-warga.store')}}" class="text-decoration-none rounded-2 px-3 py-2 {{Route::is('data-warga') ? 'text-white bg-primary' : 'text-secondary'}}">
                 <i class="bi bi-people me-2"></i>
                 <small>Data Warga</small>
             </a>

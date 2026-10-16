@@ -1,4 +1,9 @@
 @extends('layouts.app')
+
+@section('title', 'Data Warga - SIK RT 04/11')
+
+@section('page-heading', 'Data Kependudukan')
+
 @section('content')
     <div class="container-fluid min-vh-100 d-flex justify-content-center align-items-center bg-light">
         <div class="card border-0 shadow-sm rounded-4 p-4" style="width: 100%; max-width: 480px;">
