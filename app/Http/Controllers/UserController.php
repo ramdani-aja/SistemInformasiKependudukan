@@ -3,24 +3,35 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    // Halaman Login
-    public function login()
+    public function authenticate(Request $request)
     {
-        return view('auth.login');
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
+        if (Auth::attempt($credentials)) {
+            $request->session()->regenerate();
+
+            return redirect()->intended(route('dashboard'));
+        }
+
+        return back()
+            ->withErrors(['email' => 'Email atau password salah.'])
+            ->onlyInput('email');
     }
 
-    // Halaman Dashboard
-    public function dashboard()
+    public function logout(Request $request)
     {
-        return view('dashboard');
-    }
+        Auth::logout();
 
-    // Halaman Data Warga
-    public function dataWarga()
-    {
-        return view('data-warga');
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('login');
     }
 }

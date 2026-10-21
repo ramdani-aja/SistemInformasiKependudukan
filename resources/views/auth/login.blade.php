@@ -33,22 +33,15 @@
                 </p>
             </div>
             <!-- Form -->
-            <form action="{{ '/' }}" method="POST">
+            <form action="{{ route('login.authenticate') }}" method="POST">
                 @csrf
                 <!-- Username -->
                 <div class="mb-3">
                     <label for="username" class="form-label fw-semibold small">
                         Username
                     </label>
-                    <input
-                        type="text"
-                        id="username"
-                        name="username"
-                        class="form-control"
-                        placeholder="Masukkan username"
-                        value="{{ old('username') }}"
-                        required
-                    >
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Masukkan username" value="{{ old('username') }}"
+                        required>
                 </div>
                 <!-- Password -->
                 <div class="mb-3">
@@ -64,11 +57,8 @@
                             placeholder="Masukkan password"
                             required
                         >
-                        <button
-                            type="button"
-                            class="btn position-absolute top-50 end-0 translate-middle-y border-0 text-secondary"
-                            onclick="togglePassword()"
-                        >
+                        <button type="button" class="btn position-absolute top-50 end-0 translate-middle-y border-0 text-secondary"
+                            onclick="togglePassword()" >
                             <i class="bi bi-eye-slash" id="passwordIcon"></i>
                         </button>
                     </div>
@@ -94,8 +84,8 @@
                     </a>
                 </div>
                 <!-- Tombol -->
-                <button type="submit"class="btn btn-primary w-100 py-2 fw-semibold">
-                    <a href="{{ route('dashboard.store')}}" class="text-white text-decoration-none"> Masuk Ke Dashboard</a>
+                <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">
+                    Masuk Ke Dashboard
                 </button>
             </form>
         </div>

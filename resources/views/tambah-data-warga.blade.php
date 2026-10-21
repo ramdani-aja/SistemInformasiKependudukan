@@ -31,9 +31,7 @@
             </div>
 
             {{-- FORM --}}
-            <form action="{{ route('data-warga.store') }}"
-                method="POST"
-                enctype="multipart/form-data">
+            <form action="{{ route('tambah-data-warga.store') }}" method="POST">
 
                 @csrf
 

@@ -18,7 +18,7 @@
         </div>
         <!-- Menu -->
         <div class="d-flex flex-column gap-2">
-            <a href="{{ route('dashboard.store')}}" class="text-decoration-none rounded-2 px-3 py-2 {{Route::is('dashboard') ? 'text-white bg-primary' : 'text-secondary'}}">
+            <a href="{{ route('dashboard')}}" class="text-decoration-none rounded-2 px-3 py-2 {{Route::is('dashboard') ? 'text-white bg-primary' : 'text-secondary'}}">
                 <i class="bi bi-grid me-2"></i>
                 <small>Dashboard</small>
             </a>
@@ -26,11 +26,11 @@
                 <i class="bi bi-people me-2"></i>
                 <small>Data Warga</small>
             </a>
-            <a href="#" class="text-secondary text-decoration-none rounded-2 px-3 py-2">
+            <a href="{{ route('peta-komplek')}}" class="text-secondary text-decoration-none rounded-2 px-3 py-2 {{Route::is('peta-komplek') ? 'text-white bg-primary' : 'text-secondary'}}">
                 <i class="bi bi-map me-2"></i>
                 <small>Peta Komplek</small>
             </a>
-            <a href="#" class="text-secondary text-decoration-none rounded-2 px-3 py-2">
+            <a href="" class="text-secondary text-decoration-none rounded-2 px-3 py-2">
                 <i class="bi bi-shield me-2"></i>
                 <small>Admin</small>
             </a>
